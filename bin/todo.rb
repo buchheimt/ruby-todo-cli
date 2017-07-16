@@ -20,7 +20,12 @@ if __FILE__ == $PROGRAM_NAME
       when "2"
         my_list.show
         input = Promptable.prompt
+      when "3"
+        filename_input = Promptable.prompt("\nPlease provide a filename to write to: ")
+        my_list.write_to_file(filename_input)
+        input = Promptable.prompt
       else
+        puts "Sorry, I don't recognize that input..."
         input = Promptable.prompt
     end
   end

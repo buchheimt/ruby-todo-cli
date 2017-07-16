@@ -16,12 +16,21 @@ class List
     all_tasks.each {|task| puts task.description}
   end
 
+  def write_to_file(filename)
+    IO.write(filename, @all_tasks.map(&:to_s).join("\n"))
+    puts "Your list was written to #{filename}!"
+  end
+
 end
 
 class Task
   attr_reader :description
   def initialize(description)
     @description = description
+  end
+
+  def to_s
+    @description
   end
 
 end

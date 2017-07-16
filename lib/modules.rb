@@ -3,7 +3,7 @@ module Menu
   def menu
     puts "Welcome to the Spiffy To-Do List CLI!"
     puts "Here are your current options:"
-    puts "1) Add\n2) Show\nQ) Quit"
+    puts "1) Add\n2) Show\n3) Write to a File\nQ) Quit"
   end
 
   def show
