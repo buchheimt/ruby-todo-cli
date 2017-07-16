@@ -10,17 +10,19 @@ if __FILE__ == $PROGRAM_NAME
 
   my_list = List.new
   Menu.show
-  until Promptable.prompt == "Q"
+  input = Promptable.prompt
+  until input.upcase == "Q"
+    case input
+      when "1"
+        task_input = Promptable.prompt("\nWhat task would you like to add?")
+        my_list.add(Task.new(task_input))
+        input = Promptable.prompt
+      when "2"
+        my_list.show
+        input = Promptable.prompt
+      else
+        input = Promptable.prompt
+    end
   end
-
-
-  #my_task1 = Task.new("walk the dogs")
-  #my_task2 = Task.new("code things")
-
-  #my_list.add(my_task1)
-  #my_list.add(my_task2)
-  #my_list.show
-
-
-
+  puts "\nThanks for using the Spiffy To-Do List CLI!"
 end
