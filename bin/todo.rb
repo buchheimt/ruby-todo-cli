@@ -1,4 +1,9 @@
-require "../lib/classes.rb"
+#!/usr/local/bin/ruby -w
 
-my_list = List.new
-puts my_list
+require_relative "../lib/classes"
+require "pry"
+
+if __FILE__ == $PROGRAM_NAME
+  my_list = List.new
+  puts "You have created a new list"
+end
