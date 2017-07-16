@@ -1,6 +1,7 @@
 #!/usr/local/bin/ruby -w
 
 require_relative "../lib/classes"
+require_relative "../lib/modules"
 require "pry"
 
 if __FILE__ == $PROGRAM_NAME
