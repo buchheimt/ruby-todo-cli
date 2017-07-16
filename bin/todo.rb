@@ -5,10 +5,10 @@ require "pry"
 
 if __FILE__ == $PROGRAM_NAME
   my_list = List.new
-  puts "You have created a new list"
+  my_task1 = Task.new("walk the dogs")
+  my_task2 = Task.new("code things")
 
-  my_task = Task.new("walk the dogs")
-
-  my_list.add(my_task.description)
-  puts my_list.all_tasks
+  my_list.add(my_task1)
+  my_list.add(my_task2)
+  my_list.show
 end
