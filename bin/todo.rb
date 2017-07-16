@@ -6,8 +6,14 @@ require "pry"
 
 if __FILE__ == $PROGRAM_NAME
   include Menu
+  include Promptable
 
-  #my_list = List.new
+  my_list = List.new
+  Menu.show
+  until Promptable.prompt == "Q"
+  end
+
+
   #my_task1 = Task.new("walk the dogs")
   #my_task2 = Task.new("code things")
 
@@ -15,6 +21,6 @@ if __FILE__ == $PROGRAM_NAME
   #my_list.add(my_task2)
   #my_list.show
 
-  Menu.show
+
 
 end
