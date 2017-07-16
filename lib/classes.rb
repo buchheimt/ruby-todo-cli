@@ -13,7 +13,7 @@ class List
 
   def show
     puts "\nHere are your tasks:"
-    all_tasks.each {|task| puts task.description}
+    all_tasks.each_with_index {|task, index| puts "#{index + 1}) #{task.description}"}
   end
 
   def write_to_file(filename)
