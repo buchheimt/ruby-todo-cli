@@ -6,7 +6,7 @@ module Menu
 
   def menu
     puts "\nHere are your options:"
-    puts "1) Add\n2) Show\n3) Update\n4) Delete\n5) Write to a File\n6) Read from a File\nQ) Quit"
+    puts "1) Add\n2) Show\n3) Update\n4) Delete\n5) Write to a File\n6) Read from a File\nH) Help\nQ) Quit"
   end
 
   def show

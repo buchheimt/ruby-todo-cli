@@ -45,7 +45,7 @@ if __FILE__ == $PROGRAM_NAME
         filename_input = prompt("\nPlease provide a filename to read from: ")
         my_list.read_from_file(filename_input)
         input = prompt
-      when "help"
+      when "H"
         show
         input = prompt
       else
