@@ -20,6 +20,10 @@ class List
     puts "Your list was written to #{filename}!"
   end
 
+  def read_from_file(filename)
+    IO.readlines(filename).each { |line| add(Task.new(line.chomp))}
+  end
+
 end
 
 class Task
