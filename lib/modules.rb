@@ -14,7 +14,7 @@ end
 
 module Promptable
 
-  def prompt(message="\nWhat would you like to do?", symbol=":> ")
+  def prompt(message="\nWhat would you like to do? 1) Add 2) Show 3) Write to a File Q) Quit", symbol=":> ")
     puts message
     print symbol
     gets.chomp

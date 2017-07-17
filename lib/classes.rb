@@ -2,7 +2,6 @@ class List
   attr_reader :all_tasks
   def initialize
     @all_tasks = []
-    puts "You have created a new list"
   end
 
   def add(task)

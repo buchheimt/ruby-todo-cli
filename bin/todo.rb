@@ -16,7 +16,8 @@ if __FILE__ == $PROGRAM_NAME
       when "1"
         task_input = Promptable.prompt("\nWhat task would you like to add?")
         my_list.add(Task.new(task_input))
-        input = Promptable.prompt
+        input = Promptable.prompt("\nAdd more tasks? (Y/n)")
+        input.upcase == "Y" || input.upcase == "YES" ? input = "1" : input = Promptable.prompt
       when "2"
         my_list.show
         input = Promptable.prompt
