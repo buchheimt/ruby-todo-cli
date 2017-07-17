@@ -28,6 +28,10 @@ class List
     @all_tasks.delete_at(task_number.to_i - 1)
   end
 
+  def update(task_number, task)
+    @all_tasks[task_number.to_i - 1] = task
+  end
+
 end
 
 class Task

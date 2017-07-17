@@ -9,6 +9,7 @@ if __FILE__ == $PROGRAM_NAME
   include Promptable
 
   my_list = List.new
+  welcome
   show
   input = prompt
   until input.upcase == "Q"
@@ -23,18 +24,29 @@ if __FILE__ == $PROGRAM_NAME
         input = prompt
       when "3"
         my_list.show
+        task_number = prompt("\nWhat task would you like to update?(Enter task number)")
+        task_description = prompt("\nDescribe your new task: ")
+        my_list.update(task_number, Task.new(task_description))
+        my_list.show
+        input = prompt("\nUpdate more tasks? (Y/n)")
+        input.upcase == "Y" || input.upcase == "YES" ? input = "3" : input = prompt
+      when "4"
+        my_list.show
         task_number = prompt("\nWhat task would you like to delete?(Enter task number)")
         my_list.delete(task_number)
         my_list.show
         input = prompt("\nDelete more tasks? (Y/n)")
-        input.upcase == "Y" || input.upcase == "YES" ? input = "3" : input = prompt
-      when "4"
+        input.upcase == "Y" || input.upcase == "YES" ? input = "4" : input = prompt
+      when "5"
         filename_input = prompt("\nPlease provide a filename to write to: ")
         my_list.write_to_file(filename_input)
         input = prompt
-      when "5"
+      when "6"
         filename_input = prompt("\nPlease provide a filename to read from: ")
         my_list.read_from_file(filename_input)
+        input = prompt
+      when "help"
+        show
         input = prompt
       else
         puts "Sorry, I don't recognize that input..."
