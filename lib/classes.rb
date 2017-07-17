@@ -24,6 +24,10 @@ class List
     IO.readlines(filename).each { |line| add(Task.new(line.chomp))}
   end
 
+  def delete(task_number)
+    @all_tasks.delete_at(task_number.to_i - 1)
+  end
+
 end
 
 class Task
