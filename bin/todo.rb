@@ -32,16 +32,23 @@ if __FILE__ == $PROGRAM_NAME
         input.upcase == "Y" || input.upcase == "YES" ? input = "3" : input = prompt
       when "4"
         my_list.show
+        task_number = prompt("\nWhat task status would you like to change?(Enter task number)")
+        my_list.toggle(task_number)
+        my_list.show
+        input = prompt("\nToggle more tasks? (Y/n)")
+        input.upcase == "Y" || input.upcase == "YES" ? input = "4" : input = prompt
+      when "5"
+        my_list.show
         task_number = prompt("\nWhat task would you like to delete?(Enter task number)")
         my_list.delete(task_number)
         my_list.show
         input = prompt("\nDelete more tasks? (Y/n)")
-        input.upcase == "Y" || input.upcase == "YES" ? input = "4" : input = prompt
-      when "5"
+        input.upcase == "Y" || input.upcase == "YES" ? input = "5" : input = prompt
+      when "6"
         filename_input = prompt("\nPlease provide a filename to write to: ")
         my_list.write_to_file(filename_input)
         input = prompt
-      when "6"
+      when "7"
         filename_input = prompt("\nPlease provide a filename to read from: ")
         my_list.read_from_file(filename_input)
         input = prompt

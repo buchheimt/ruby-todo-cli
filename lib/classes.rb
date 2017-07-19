@@ -12,7 +12,7 @@ class List
 
   def show
     puts "\nHere are your tasks:"
-    all_tasks.each_with_index {|task, index| puts "#{index + 1}) #{task.description}"}
+    all_tasks.each_with_index {|task, index| puts "#{index + 1}) #{task.to_machine}"}
   end
 
   def write_to_file(filename)
@@ -36,6 +36,10 @@ class List
     @all_tasks[task_number.to_i - 1] = task
   end
 
+  def toggle(task_number)
+    @all_tasks[task_number.to_i - 1].toggle_status
+  end
+
 end
 
 class Task
@@ -54,14 +58,17 @@ class Task
     @status
   end
 
+  def toggle_status
+    @status = !@status
+  end
+
+  def to_machine
+    "#{represent_status} : #{@description}"
+  end
+
   private
   def represent_status
     @status ? '[X]' : '[ ]'
-  end
-
-  public
-  def to_machine
-    "#{represent_status} : #{@description}"
   end
 
 end
