@@ -1,4 +1,31 @@
-[ ] : eat
-[ ] : sleep
-[ ] : drink
-[X] : snuggle wocket
+[X] : FIS Enumerators Code Challenge (15)
+
+[X] : FIS Prime? Lab (30)
+
+[X] : FIS Sorting (60)
+
+[X] : FIS Sorting Lab (90)
+
+[X] : FIS Intro to Hashes (30)
+
+[X] : FIS Using Hashes (60)
+
+[X] : FIS Symbols (20)
+
+[X] : FIS Hash Iteration with Each (60)
+
+[X] : FIS Hash Iteration with Collect (45)
+
+[X] : FIS Hash Iteration Lab (45)
+
+[X] : FIS Intro to Nested Hashes (45)
+
+[X] : FIS Building Nested Hashes (20)
+
+[X] : TORONTO Week 4 Lessons (150)
+
+[X] : TORONTO Week 4 Quizz (90)
+
+[ ] : CC GIT JavaScript Homework (30)
+
+[ ] : CC GIT Recipe Book (30)
