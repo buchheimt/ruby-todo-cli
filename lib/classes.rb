@@ -16,7 +16,7 @@ class List
   end
 
   def write_to_file(filename)
-    IO.write(filename, @all_tasks.map(&:to_machine).join("\n"))
+    IO.write(filename, @all_tasks.map(&:to_machine).join(""))
     puts "Your list was written to #{filename}!"
   end
 

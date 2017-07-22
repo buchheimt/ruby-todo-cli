@@ -13,6 +13,10 @@ module Menu
     menu
   end
 
+  def get_time_formatted
+    "#{Time.now.month}-#{Time.now.day}-#{Time.now.year}"
+  end
+
 end
 
 module Promptable

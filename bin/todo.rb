@@ -8,7 +8,10 @@ if __FILE__ == $PROGRAM_NAME
   include Menu
   include Promptable
 
+
   my_list = List.new
+  filename = "daily-files/#{get_time_formatted}"
+  my_list.read_from_file(filename) if File.file?(filename)
   welcome
   show
   input = prompt
@@ -60,5 +63,6 @@ if __FILE__ == $PROGRAM_NAME
         input = prompt
     end
   end
+  my_list.write_to_file(filename)
   puts "\nThanks for using the Spiffy To-Do List CLI!"
 end
